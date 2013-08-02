@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>b74e6560-1c48-4365-b31d-7e58d616da12</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>pycuda</Name>
+    <RootNamespace>pycuda</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="pycuda\cuda\" />
+    <Folder Include="src\" />
+    <Folder Include="pycuda\" />
+    <Folder Include="src\src\" />
+    <Folder Include="src\src\cpp\" />
+    <Folder Include="src\src\wrapper\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="pycuda\autoinit.py" />
+    <Compile Include="pycuda\characterize.py" />
+    <Compile Include="pycuda\compiler.py" />
+    <Compile Include="pycuda\cumath.py" />
+    <Compile Include="pycuda\curandom.py" />
+    <Compile Include="pycuda\debug.py" />
+    <Compile Include="pycuda\driver.py" />
+    <Compile Include="pycuda\elementwise.py" />
+    <Compile Include="pycuda\gpuarray.py" />
+    <Compile Include="pycuda\reduction.py" />
+    <Compile Include="pycuda\scan.py" />
+    <Compile Include="pycuda\tools.py" />
+    <Compile Include="pycuda\_cluda.py" />
+    <Compile Include="pycuda\_mymako.py" />
+    <Compile Include="pycuda\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pycuda\cuda\pycuda-complex-impl.hpp" />
+    <Content Include="pycuda\cuda\pycuda-complex.hpp" />
+    <Content Include="pycuda\cuda\pycuda-helpers.hpp" />
+    <Content Include="src\src\cpp\bitlog.cpp" />
+    <Content Include="src\src\cpp\bitlog.hpp" />
+    <Content Include="src\src\cpp\cuda.cpp" />
+    <Content Include="src\src\cpp\cuda.hpp" />
+    <Content Include="src\src\cpp\cuda_gl.hpp" />
+    <Content Include="src\src\cpp\curand.hpp" />
+    <Content Include="src\src\cpp\mempool.hpp" />
+    <Content Include="src\src\wrapper\mempool.cpp" />
+    <Content Include="src\src\wrapper\numpy_init.hpp" />
+    <Content Include="src\src\wrapper\tools.hpp" />
+    <Content Include="src\src\wrapper\wrap_cudadrv.cpp" />
+    <Content Include="src\src\wrapper\wrap_cudagl.cpp" />
+    <Content Include="src\src\wrapper\wrap_curand.cpp" />
+    <Content Include="src\src\wrapper\wrap_helpers.hpp" />
+    <Content Include="src\src\wrapper\_pvt_struct_v2.cpp" />
+    <Content Include="src\src\wrapper\_pvt_struct_v3.cpp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+</Project>
