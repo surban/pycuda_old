@@ -16,6 +16,5 @@ def _finish_up():
     from pycuda.tools import clear_context_caches
     clear_context_caches()
 
-# does more harm than good:
 import atexit
 atexit.register(_finish_up)

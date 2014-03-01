@@ -1,6 +1,6 @@
 from pytools import memoize
 # don't import pycuda.driver here--you'll create an import loop
-import sys, os
+import sys
 from tempfile import mkstemp
 from os import unlink
 
@@ -177,9 +177,8 @@ def _get_per_user_string():
 
 
 def _find_pycuda_include_path():
-    p = os.path.join(os.path.dirname(__file__), 'cuda')
-    #print "pycuda include path: ", p
-    return p
+    from pkg_resources import Requirement, resource_filename
+    return resource_filename(Requirement.parse("pycuda"), "pycuda/cuda")
 
 
 
