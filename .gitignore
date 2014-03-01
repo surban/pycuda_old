@@ -1,5 +1,7 @@
+build/
 *.suo
 *.pyc
 *.pyo
 siteconf.py
 pycuda.egg-info
+*.pyd
